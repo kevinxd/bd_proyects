@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="success">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Agregar Venta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  
+    <ion-list>
+       
+        <ion-item>
+          <ion-label>Tipo de pago</ion-label>
+          <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
+            <ion-select-option value="Labsa">Transferencia</ion-select-option>
+            <ion-select-option value="Sulfonico">Punto</ion-select-option>
+            <ion-select-option value="Genapol">Efectivo</ion-select-option> 
+          </ion-select>
+        </ion-item>
+      <br>
+      <ion-item>
+          <ion-label>Producto</ion-label>
+          <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
+            <ion-select-option value="Jabon Ariel">Jabon Ariel</ion-select-option>
+            <ion-select-option value="Sulfonico">Cloro</ion-select-option>
+            <ion-select-option value="Genapol">Lavaplato</ion-select-option> 
+            <ion-select-option value="Genapol">Neutro</ion-select-option> 
+            <ion-select-option value="Genapol">Desinfectante</ion-select-option> 
+            <ion-select-option value="Genapol">Cloro Jabonoso</ion-select-option>
+            <ion-select-option value="Genapol">Cera</ion-select-option>  
+          </ion-select>
+        </ion-item>
+        <br>
+      </ion-list>
+      <ion-item>
+          <ion-label position="floating">Cantidad</ion-label>
+          <ion-input type="text" name="quantity"></ion-input>   
+      </ion-item>
+      <br>
+      <ion-item>
+          <ion-label position="floating">Precio</ion-label>
+          <ion-input type="text" name="price"></ion-input>   
+      </ion-item>
+      <br>
+      <ion-item>
+          <ion-label position="floating">Descripcion</ion-label>
+          <ion-input type="text" name="description"></ion-input>   
+      </ion-item>
+      <br>
+     
+      <ion-button class="marginbtn" color="success">Agregar</ion-button>
+      <ion-button color="success" routerLink="/dashboard">Cancelar</ion-button>
+     
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="success">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Empleados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card  color="light" >
+        <ion-card-header >
+         Trabajador 1 
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list >
+
+                <ion-item>
+                    <ion-label>Nombre</ion-label>
+                    <ion-input type="text" value="Pedro"></ion-input>
+                  </ion-item>
+              
+                <ion-item>
+                  <ion-label>Apellido</ion-label>
+                  <ion-input type="text" value="Perez"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Sueldo</ion-label>
+                    <ion-input type="text" value="1000$"></ion-input>
+                  </ion-item>
+              
+              </ion-list>
+         
+         
+              <br>
+              <ion-button class="marginbtn" color="success">Editar</ion-button>
+              <ion-button color="success" routerLink="/dashboard">Eliminar</ion-button>
+
+        </ion-card-content>
+       
+      
+      </ion-card>
+      <ion-fab vertical="top" horizontal="end" slot="fixed">
+          <ion-fab-button>
+            <ion-icon name="add" routerLink="/add-inv"></ion-icon>
+          </ion-fab-button>
+      </ion-fab>
+    
+
+</ion-content>
