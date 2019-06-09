@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from "../../servicios/auth.service";
 import { Router } from "@angular/router";
 
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -14,11 +13,13 @@ export class RegisterPage implements OnInit {
   public password: string;
   public name: string;
   public lastname: string;
+
   constructor(private AFauth : AuthService, private router: Router ) { }
   ngOnInit() {
   }
 
   onSubmitRegister(){
+
     this.AFauth.register(this.email, this.password, this.name, this.lastname).then(auth => {
       this.router.navigate(['dashboard'])
       console.log(auth)

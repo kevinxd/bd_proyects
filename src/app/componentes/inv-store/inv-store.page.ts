@@ -4,12 +4,14 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 
+
 @Component({
   selector: 'app-inv-store',
   templateUrl: './inv-store.page.html',
   styleUrls: ['./inv-store.page.scss'],
 })
 export class InvStorePage implements OnInit {
+
   public products : string;
   public quantity : string;
   public price : string;
@@ -39,6 +41,7 @@ export class InvStorePage implements OnInit {
 
   
   }
+
 
 
 }

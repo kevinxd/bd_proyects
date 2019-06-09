@@ -8,9 +8,11 @@
 </ion-header>
 
 <ion-content padding>
+
     <ion-card *ngFor="let item of items | async"  color="light" >
         <ion-card-header >
           {{item.nombre}}
+
         </ion-card-header>
         <ion-card-content>
             <ion-list >

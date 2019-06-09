@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'componentes', loadChildren: './componentes/componentes.module#ComponentesPageModule' },
   { path: 'providers', loadChildren: './componentes/providers/providers.module#ProvidersPageModule' },
   { path: 'addproviders', loadChildren: './componentes/addproviders/addproviders.module#AddprovidersPageModule' },
- 
+
 ];
 
 @NgModule({

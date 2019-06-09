@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./inventory.page.scss'],
 })
 export class InventoryPage implements OnInit {
+
   espec = [];
   uid = null;
   //dbreference: FirebaseListObservable<any[]>
@@ -28,6 +29,7 @@ export class InventoryPage implements OnInit {
      });  
   }
   
+
 
   ngOnInit() {
   }

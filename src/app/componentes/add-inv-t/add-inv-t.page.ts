@@ -3,12 +3,14 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+
 @Component({
   selector: 'app-add-inv-t',
   templateUrl: './add-inv-t.page.html',
   styleUrls: ['./add-inv-t.page.scss'],
 })
 export class AddInvTPage implements OnInit {
+
   items: Observable<any[]>;
   itemsRef: AngularFireList<any>;
   constructor(db: AngularFireDatabase) {  
@@ -28,5 +30,6 @@ export class AddInvTPage implements OnInit {
 
 
 }
+
 
 
