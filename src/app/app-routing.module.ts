@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'sales2', loadChildren: './componentes/sales2/sales2.module#Sales2PageModule' },
   { path: 'componentes', loadChildren: './componentes/componentes.module#ComponentesPageModule' },
   { path: 'providers', loadChildren: './componentes/providers/providers.module#ProvidersPageModule' },
-  { path: 'addproviders', loadChildren: './componentes/addproviders/addproviders.module#AddprovidersPageModule' },
+  { path: 'addproviders', loadChildren: './componentes/addproviders/addproviders.module#AddprovidersPageModule' },  { path: 'addemployed', loadChildren: './componentes/addemployed/addemployed.module#AddemployedPageModule' },
+
 
 ];
 

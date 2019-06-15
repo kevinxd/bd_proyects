@@ -10,25 +10,30 @@
 <ion-content>  
   <ion-item>
     <ion-label position="floating">Nombre</ion-label>
-    <ion-input type="text" name="quantity"></ion-input>   
+    <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>   
 </ion-item>
 <br>
 <ion-item>
     <ion-label position="floating">Apellido</ion-label>
-    <ion-input type="text" name="price"></ion-input>   
+    <ion-input type="text" [(ngModel)]="lastname" name="lastname"></ion-input>   
 </ion-item>
 <br>
 <ion-item>
     <ion-label position="floating">Telefono</ion-label>
-    <ion-input type="text" name="description"></ion-input>   
+    <ion-input type="text" [(ngModel)]="phone" name="phone"></ion-input>   
+</ion-item>
+<br>
+<ion-item>
+  <ion-label position="floating">Nombre Empresa</ion-label>
+  <ion-input type="text" [(ngModel)]="company" name="company"></ion-input>   
 </ion-item>
 <br>
 <ion-item>
     <ion-label position="floating">Rif</ion-label>
-    <ion-input type="text" name="description"></ion-input>   
+    <ion-input type="text" [(ngModel)]="rif" name="rif"></ion-input>   
 </ion-item>
 
-<ion-button class="marginbtn" color="success">Agregar</ion-button>
+<ion-button class="marginbtn" color="success" (click)="getProviders();">Agregar</ion-button>
 <ion-button color="success" routerLink="/dashboard">Cancelar</ion-button>
      
 </ion-content>

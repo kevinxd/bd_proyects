@@ -46,4 +46,27 @@ export class AuthService {
     })
     
   }
+
+  registerEmployed(email: string, password: string, name: string, lastname: string, phone:string){
+    return new Promise((resolve, reject) =>{
+      this.AFauth.auth.createUserWithEmailAndPassword(email, password).then(res =>{
+        const uid = res.user.uid;
+        firebase.database().ref('Personas' + '/' + uid).set({
+          name: name,
+          lastname: lastname,
+          uid: uid,
+          Empleado: {
+            id_emp: 1,
+            sueldo: 10000
+          },
+          phone: phone 
+        })
+        resolve(res)
+      }).catch(err => reject(err))
+    })
+    
+  }
+
+
 }
+

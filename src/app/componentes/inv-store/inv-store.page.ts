@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { CrudService } from "../../servicios/crud.service";
+import { Router } from "@angular/router";
 
 
 
@@ -19,7 +21,7 @@ export class InvStorePage implements OnInit {
 
   items: Observable<any[]>;
   itemsRef: AngularFireList<any>;
-  constructor(db: AngularFireDatabase) {  
+  constructor(db: AngularFireDatabase, private fbAdd : CrudService, private router: Router) {  
    this.itemsRef = db.list('Productos');
    this.items = this.itemsRef.snapshotChanges().pipe(
     map(changes => 
@@ -34,13 +36,13 @@ export class InvStorePage implements OnInit {
   }
 
   getProducts(){
-    console.log(this.products)
-    console.log(this.quantity)
-    console.log(this.price)
-    console.log(this.description)
-
-  
+    this.fbAdd.addToInventory(this.products, this.quantity, this.price, this.description).then(res => {
+      this.router.navigate(['dashboard'])
+      console.log(res)
+    }).catch(err => console.log(err))
   }
+  
+
 
 
 

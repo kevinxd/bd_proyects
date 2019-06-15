@@ -12,16 +12,8 @@
        
         <ion-item>
           <ion-label>Agregar Material para produccion</ion-label>
-          <ion-select multiple="true" cancelText="Cancelar" okText="Aceptar">
-            <ion-select-option value="Labsa">Labsa</ion-select-option>
-            <ion-select-option value="Sulfonico">Sulfonico</ion-select-option>
-            <ion-select-option value="Genapol">Genapol</ion-select-option>
-            <ion-select-option value="Hipoclorito">Hipoclorito</ion-select-option>
-            <ion-select-option value="Soda Caustica">Soda Caustica</ion-select-option>
-            <ion-select-option value="Tripoli Fosfato">Tripoli Fosfato</ion-select-option>
-            <ion-select-option value="Tripoli Fosfato">Formol</ion-select-option>
-            <ion-select-option value="Tripoli Fosfato">Espesante</ion-select-option>
-           
+          <ion-select [(ngModel)]="name" (ngModelChange)="name"  cancelText="Cancelar" okText="Aceptar">
+            <ion-select-option *ngFor="let item of items | async" [value]="item.nombre">{{item.name}}</ion-select-option>    
           </ion-select>
         </ion-item>
       <br>
@@ -29,21 +21,25 @@
       </ion-list>
       <ion-item>
           <ion-label position="floating">Cantidad</ion-label>
-          <ion-input type="text" name="quantity"></ion-input>   
+          <ion-input type="text" [(ngModel)]="quantity" name="quantity"></ion-input>   
       </ion-item>
       <br>
       <ion-item>
           <ion-label position="floating">Precio</ion-label>
-          <ion-input type="text" name="price"></ion-input>   
+          <ion-input type="text" [(ngModel)]="price" name="price"></ion-input>   
       </ion-item>
       <br>
       <ion-item>
           <ion-label position="floating">Descripcion</ion-label>
-          <ion-input type="text" name="description"></ion-input>   
+          <ion-input type="text" [(ngModel)]="description" name="description"></ion-input>   
       </ion-item>
       <br>
+      <ion-item>
+        <ion-label position="floating">Rif del Proveedor</ion-label>
+        <ion-input type="text" [(ngModel)]="rifProv" name="rifProv"></ion-input>   
+    </ion-item>
      
-      <ion-button class="marginbtn" color="success">Agregar</ion-button>
+      <ion-button class="marginbtn" color="success" (click)="getMateriaPrima();">Agregar</ion-button>
       <ion-button color="success" routerLink="/dashboard">Cancelar</ion-button>
      
 </ion-content>
