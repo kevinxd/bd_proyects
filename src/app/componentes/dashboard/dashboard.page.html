@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="success" >
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card   routerLink="/inventory">
+        <ion-card-header color="dark" >
+          Materia Prima <ion-icon class="iconSpacing" name="list"></ion-icon> 
+        </ion-card-header>
+        
+        <ion-card-content class="textodash">
+          Información detallada sobre mi materia prima adquirida <ion-icon class="div" name="ios-arrow-forward" ></ion-icon>
+        </ion-card-content>
+        
+      
+      </ion-card>
+
+      <ion-card  routerLink="/sales2">
+          <ion-card-header color="dark" >
+            Ventas   <ion-icon class="iconSpacing" name="cash"></ion-icon> 
+          </ion-card-header>
+         
+          <ion-card-content class="textodash">
+            Información detallada sobre mis ventas <ion-icon class="div" name="ios-arrow-forward" ></ion-icon>
+          </ion-card-content>
+          
+        </ion-card>
+
+        <ion-card  routerLink="/add-inv-t">
+          <ion-card-header color="dark" >
+           Inventario de Tienda <ion-icon class="iconSpacing" name="list"></ion-icon>
+          </ion-card-header>
+         
+          <ion-card-content class="textodash">
+            Información detallada sobre mis productos existentes en el local <ion-icon class="div" name="ios-arrow-forward" ></ion-icon>
+          </ion-card-content>
+          
+        </ion-card>
+
+        <ion-card   class="people" routerLink="/employed">
+              <ion-card-header class="people" color="dark" >
+                Empleados   <ion-icon class="iconSpacing" name="people"></ion-icon>
+              </ion-card-header>
+             
+              <ion-card-content class="textodash">
+              Información detallada sobre mis empleados <ion-icon class="div" name="ios-arrow-forward" ></ion-icon>
+              </ion-card-content>
+              
+        </ion-card>
+
+        <ion-card   class="people" routerLink="/providers">
+          <ion-card-header class="people" color="dark" >
+            Proveedores   <ion-icon class="iconSpacing" name="people"></ion-icon>
+          </ion-card-header>
+         
+          <ion-card-content class="textodash">
+          Información detallada sobre mis proveedores <ion-icon class="div" name="ios-arrow-forward" ></ion-icon>
+          </ion-card-content>
+          
+    </ion-card>
+
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar  color="success">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+      <ion-title>Agregar Producto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-list>
+         
+          <ion-item>
+            <ion-label>Agregar producto al invetario</ion-label>
+
+            <ion-select [(ngModel)]="products" (ngModelChange)="products" cancelText="Cancelar" okText="Aceptar">
+                <ion-select-option *ngFor="let item of items | async" [value]="item.nombre">{{item.nombre}}</ion-select-option>    
+
+            </ion-select>
+          </ion-item>
+        <br>
+       
+        </ion-list>
+        <ion-item>
+            <ion-label position="floating">Cantidad</ion-label>
+
+            <ion-input [(ngModel)]="quantity"  type="text" name="quantity"></ion-input>   
+
+        </ion-item>
+        <br>
+        <ion-item>
+            <ion-label position="floating">Precio</ion-label>
+
+            <ion-input [(ngModel)]="price" type="text" name="price"></ion-input>   
+
+        </ion-item>
+        <br>
+        <ion-item>
+            <ion-label position="floating">Descripcion</ion-label>
+
+            <ion-input [(ngModel)]="description" type="text" name="description"></ion-input>   
+
+         
+        </ion-item>
+        <br>
+       
+        <ion-button class="marginbtn" color="success" (click)="getProducts();">Agregar</ion-button>
+        <ion-button color="success" routerLink="/dashboard">Cancelar</ion-button>
+       
+  </ion-content>
+  

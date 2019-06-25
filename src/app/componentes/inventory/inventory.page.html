@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="success">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>Inventario de materia prima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card  color="light" *ngFor="let item of items | async" >
+        <ion-card-header >
+          {{item.name}} 
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list >
+
+                <ion-item>
+                    <ion-label>Precio: {{item.price}}</ion-label>
+                    <ion-input type="text" ></ion-input>
+                  </ion-item>
+              
+                <ion-item>
+                  <ion-label>Cantidad: {{item.quantity}}</ion-label>
+                  <ion-input type="text" ></ion-input>
+                </ion-item>
+              
+              </ion-list>
+              <br>
+          {{item.description}} 
+         
+          <br>
+          <ion-button class="marginbtn" (click)="presentAlertEdit(item.idMat);" color="success">Editar</ion-button>
+          <ion-button color="success" (click)="presentAlert(item.idMat);" >Eliminar</ion-button>
+
+        </ion-card-content>
+       
+      
+      </ion-card>
+      <ion-fab vertical="top" horizontal="end" slot="fixed">
+          <ion-fab-button>
+            <ion-icon name="add" routerLink="/add-inv"></ion-icon>
+          </ion-fab-button>
+      </ion-fab>
+    
+
+</ion-content>
